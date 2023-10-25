@@ -4,7 +4,11 @@ function buttontoggle(){
     const buttons = document.querySelectorAll('.faq-toggle')
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
+            if(btn.parentNode.classList.contains('active')){
+                btn.parentNode.remove();
+            }
             btn.parentNode.classList.toggle('active');
+
         })
     })
     const addiv = document.getElementById("input");
